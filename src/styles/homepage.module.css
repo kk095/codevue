@@ -1,0 +1,7 @@
+@import "color.css";
+
+.homepage{
+    height: 100vh;
+    background-color: var(--darkBackgroundColor);
+    color: var(--darkPrimaryColor);
+}
