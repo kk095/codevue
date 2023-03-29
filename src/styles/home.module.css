@@ -12,7 +12,6 @@
 .center{
     width: 100%;
     height: 90%;
-    background:linear-gradient(to right,var(--darkBackgroundColor),transparent);
     display: flex;
     justify-content: space-between;
 }
@@ -25,6 +24,46 @@
     top: 2px;
     z-index: 100;
     width: 100%;
+}
+.navlink{
+    display: flex;
+}
+.modes{
+    width: 110px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: transparent;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 2px;
+    transition: all 1s ease-in-out;
+    position: relative;
+}
+.modename{
+    font-size: 11px;
+    font-weight: 500;
+    margin:0 2px;
+}
+.modecircle{
+    cursor: pointer;
+    width:25px;
+    position: absolute;
+    left: 1%;
+    height: 25px;
+    border-radius: 50%;
+    border:  1px solid var(--darkBackgroundColor);
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .7s ease-in-out;
+}
+.modecircle svg{
+    color: black;
+
 }
 
 .logo{
@@ -52,7 +91,7 @@
 }
 
 .centertext{
-    width: 50%;
+    width: 100%;
     height: 95%;
     position: relative;
     display: flex;
@@ -65,10 +104,18 @@
     justify-content: space-around;
     flex-direction: column;
     height: 80%;
-    width: 80%;
+    width: 90%;
 
 }
 
+.companies{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+    width: 100%;
+    letter-spacing: 1px;
+}
 .centertext button{
     outline: none;
     padding: 10px 15px;
@@ -81,8 +128,10 @@
 
 .comlogo{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 0px 0;
+    width: 100%;
+    gap:10%;
 }
 .comlogo img{
     width: 50px;

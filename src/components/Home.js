@@ -1,28 +1,66 @@
 import styles from "../styles/home.module.css";
-import svg1 from "../images/svg1.svg";
-import svg2 from "../images/svg2.svg";
-import svg3 from "../images/svg3.svg";
-import svg4 from "../images/svg4.svg";
-import svg5 from "../images/svg5.svg";
+import { ReactComponent as Svg1 } from "../images/svg1.svg";
+import { ReactComponent as Svg2 } from "../images/svg2.svg";
+import { ReactComponent as Svg3 } from "../images/svg3.svg";
+import { ReactComponent as Svg4 } from "../images/svg4.svg";
 import {
   FaPuzzlePiece,
   FaInstagram,
   FaLinkedinIn,
   FaTwitter,
+  FaStarAndCrescent,
+  FaRegSun,
 } from "react-icons/fa";
 import img from "../images/img2.jpg";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import color from "../color";
 
-function Home() {
+function Home(props) {
+  let styl;
+  if (props.mode === color.darkTheme) {
+    styl = {
+      border: `1px solid ${props.mode.color}`,
+      flexDirection: "row",
+    };
+  } else {
+    styl = {
+      border: `1px solid ${props.mode.color}`,
+      flexDirection: "row-reverse",
+    };
+  }
   return (
     <div className={styles.home}>
       <div className={styles.center}>
         <div className={styles.nav}>
           <div className={styles.logo}>
-            <Link to={"/"}>&lt;/&gt;CodeVue </Link>
+            <Link to={"/"}>&lt;/&gt;CodeVue</Link>
           </div>
 
           <div className={styles.navlink}>
+            <div style={styl} className={styles.modes}>
+              <div className={styles.modename}>
+                {props.mode === color.darkTheme ? "NIGHTMODE" : "LIGHTMODE"}
+              </div>
+
+              {props.mode === color.darkTheme ? (
+                <div
+                  style={{ left: "75%" }}
+                  className={styles.modecircle}
+                  onClick={props.handleMode}
+                >
+                  <FaStarAndCrescent />
+                </div>
+              ) : (
+                <div
+                  style={{ left: "1%" }}
+                  className={styles.modecircle}
+                  onClick={props.handleMode}
+                >
+                  <FaRegSun />
+                </div>
+              )}
+            </div>
             <Link to={"#"}>
               <FaPuzzlePiece /> explore
             </Link>
@@ -37,11 +75,10 @@ function Home() {
             <div className={styles.companies}>
               <h4>we have worked with</h4>
               <div className={styles.comlogo}>
-                <img src={svg3} alt="svg" />
-                <img src={svg2} alt="svg" />
-                <img src={svg4} alt="svg" />
-                <img src={svg5} alt="svg" />
-                <img src={svg1} alt="svg" />
+                <Svg3 fill={props.mode.color} />
+                <Svg2 fill={props.mode.color} />
+                <Svg4 fill={props.mode.color} />
+                <Svg1 fill={props.mode.color} />
               </div>
             </div>
           </div>
