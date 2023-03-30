@@ -17,6 +17,9 @@ import { useState } from "react";
 import color from "../color";
 
 function Home(props) {
+  let [svgfill, setsvgfill] = useState(props.mode.color);
+  let [svgback, setsvgback] = useState(props.mode.backgroundColor);
+
   let styl;
   if (props.mode === color.darkTheme) {
     styl = {
@@ -31,7 +34,7 @@ function Home(props) {
   }
   return (
     <div className={styles.home}>
-      <div className={styles.center}>
+      <div id="center" className={styles.center}>
         <div className={styles.nav}>
           <div className={styles.logo}>
             <Link to={"/"}>&lt;/&gt;CodeVue</Link>
@@ -75,18 +78,33 @@ function Home(props) {
             <div className={styles.companies}>
               <h4>we have worked with</h4>
               <div className={styles.comlogo}>
-                <Svg3 fill={props.mode.color} />
-                <Svg2 fill={props.mode.color} />
-                <Svg4 fill={props.mode.color} />
-                <Svg1 fill={props.mode.color} />
+                <Svg3
+                  style={{ fill: `${props.mode.color}` }}
+                  onMouseOver={props.handleHover}
+                  onMouseOut={props.handleHoverout}
+                />
+                <Svg2
+                  style={{ fill: `${props.mode.color}` }}
+                  onMouseOver={props.handleHover}
+                  onMouseOut={props.handleHoverout}
+                />
+                <Svg4
+                  style={{ fill: `${props.mode.color}` }}
+                  onMouseOver={props.handleHover}
+                  onMouseOut={props.handleHoverout}
+                />
+                <Svg1
+                  style={{ fill: `${props.mode.color}` }}
+                  onMouseOver={props.handleHover}
+                  onMouseOut={props.handleHoverout}
+                />
               </div>
             </div>
           </div>
         </div>
-        {/* <div className={styles.imgdiv}>
-          <img src={img} alt="img" />
-          <div className={styles.shadowdiv}></div>
-        </div> */}
+      </div>
+      <div id="companyRelateddiv" className={styles.imgdiv}>
+        <img id="companyRelatedImg" alt="no-img" />
       </div>
       <div className={styles.footer}>
         <div className={styles.policy}>

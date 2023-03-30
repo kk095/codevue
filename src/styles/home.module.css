@@ -7,6 +7,8 @@
     justify-content: space-between;
     width: 100%;
     height: 100%;
+    z-index: 1;
+    position: relative;
 }
 
 .center{
@@ -14,12 +16,30 @@
     height: 90%;
     display: flex;
     justify-content: space-between;
+    z-index: 2;
+    background: linear-gradient(80deg, var(--darkBackgroundColor) 45%,rgba(0,0,0,.5) );
+    position: relative;
 }
+.imgdiv{
+    z-index: 1;
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top:0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s linear;
+}
+.imgdiv img{
+    width: 100%;
+    height: 100%;
+}
+
 
 .nav{
     display: flex;
     justify-content: space-between;
-    padding:5px 50px;
+    padding:25px 50px;
     position: absolute;
     top: 2px;
     z-index: 100;
@@ -33,7 +53,7 @@
     height: 30px;
     border-radius: 20px;
     background-color: transparent;
-    margin: 0 10px;
+    margin-right:  50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,32 +91,16 @@
     font-weight: 600;
 }
 
-.imgdiv{
-    width: 60%;
-    height: 100%;
-    position: relative;
-}
-.shadowdiv{
-    width: 100%;
-    height: 100%;
-    z-index: 20;
-    position: relative;
-    background: linear-gradient(80deg,var(--darkBackgroundColor)10%,rgba(255,255,255,.2));
-}
-.imgdiv img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: .5;
-}
+
 
 .centertext{
     width: 100%;
     height: 95%;
     position: relative;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-end;
+    padding: 0 50px;
 }
 .text{
     display: flex;
@@ -133,18 +137,17 @@
     width: 100%;
     gap:10%;
 }
-.comlogo img{
-    width: 50px;
-    height: auto;
-    margin-right: 40px;
-    margin-top: 40px;
+.comlogo svg:hover{
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 
 .footer{
     display: flex;
-    justify-content: space-around;
-    padding: 0 20px;
+    justify-content: space-between;
+    padding: 0 50px;
     align-items: center;
     height: 10%;
     width: 100%;
