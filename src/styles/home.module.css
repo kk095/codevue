@@ -207,7 +207,6 @@
         border-radius: 10px;
         position: relative;
         padding: 1px 1px;
-
     }
     .phonemodecircle{
         width: 19px;
@@ -221,6 +220,7 @@
         border: 1px solid black;
         color: black;
         background-color: white;
+        transition: all .5s ease-in-out;
     }
 }
 

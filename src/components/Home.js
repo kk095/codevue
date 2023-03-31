@@ -67,7 +67,7 @@ function Home(props) {
             <div style={styl} className={styles.phonemode}>
               {props.mode === color.darkTheme ? (
                 <div
-                  style={{ left: "60%" }}
+                  style={{ left: "65%" }}
                   className={styles.phonemodecircle}
                   onClick={props.handleMode}
                 >
