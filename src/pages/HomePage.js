@@ -17,6 +17,7 @@ function HomePage() {
     imgdiv.style.opacity = "0";
     let center = document.querySelector("#center");
     center.style.background = `unset`;
+    imgtag.style.display = "none";
   };
   const handleHover = (e) => {
     let ele = e.target.closest("svg");
@@ -24,6 +25,7 @@ function HomePage() {
     ele.style.backgroundColor = mode.color;
     let imgdiv = document.querySelector("#companyRelateddiv");
     let imgtag = document.querySelector("#companyRelatedImg");
+    imgtag.style.display = "block";
     let center = document.querySelector("#center");
     center.style.background = `linear-gradient(80deg, ${mode.backgroundColor} 45%,rgba(0,0,0,.5) )`;
     imgtag.setAttribute("src", img);

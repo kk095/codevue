@@ -17,7 +17,6 @@
     display: flex;
     justify-content: space-between;
     z-index: 2;
-    background: linear-gradient(80deg, var(--darkBackgroundColor) 45%,rgba(0,0,0,.5) );
     position: relative;
 }
 .imgdiv{
@@ -161,4 +160,67 @@
     margin: 0 10px;
 }
 
+.phonemode{
+    display: none;
+}
+
+@media screen and (max-width:500px) {
+    .nav{
+        padding: 25px 2%;
+    }
+    .centertext{
+        padding: 0 2%;
+    }
+    .footer{
+        padding: 0 2%;
+        font-size: .6rem;
+    }
+    .modes{
+        /* display: none; */
+        height: 23px;
+        margin-right:0 ;
+        width: 50px;
+        display: none;
+    }
+    .navlink{
+        gap: 1%;
+        width: 50%;
+        justify-content: space-between;
+        font-size: .8rem;
+        align-items: center;
+    }
+    .modename{
+        display: none;
+    }
+    .modecircle{
+        margin-right: 2%;
+        width: 20px;
+        height: 20px;
+    }
+    .text h1{
+        font-size: 8vw
+    }
+    .phonemode{
+        display: block;
+        width: 60px;
+        height: 23px;
+        border-radius: 10px;
+        position: relative;
+        padding: 1px 1px;
+
+    }
+    .phonemodecircle{
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        cursor: pointer;
+        border: 1px solid black;
+        color: black;
+        background-color: white;
+    }
+}
 

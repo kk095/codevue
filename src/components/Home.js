@@ -64,6 +64,25 @@ function Home(props) {
                 </div>
               )}
             </div>
+            <div style={styl} className={styles.phonemode}>
+              {props.mode === color.darkTheme ? (
+                <div
+                  style={{ left: "60%" }}
+                  className={styles.phonemodecircle}
+                  onClick={props.handleMode}
+                >
+                  <FaStarAndCrescent />
+                </div>
+              ) : (
+                <div
+                  style={{ left: "2%" }}
+                  className={styles.phonemodecircle}
+                  onClick={props.handleMode}
+                >
+                  <FaRegSun />
+                </div>
+              )}
+            </div>
             <Link to={"#"}>
               <FaPuzzlePiece /> explore
             </Link>
@@ -110,7 +129,7 @@ function Home(props) {
         <div className={styles.policy}>
           <Link to={"#"}>Privacy Policy</Link>
         </div>
-        <div className={styles.copyright}>Copyright @2023-2030</div>
+        <div className={styles.copyright}>Copyright @2023-24</div>
         <div className={styles.socialicons}>
           <Link to={"#"}>
             <FaInstagram />
