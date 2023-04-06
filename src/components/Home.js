@@ -13,22 +13,21 @@ import {
 } from "react-icons/fa";
 import img from "../images/img2.jpg";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import color from "../color";
+import { useTheme } from "../hooks/theme";
 
 function Home(props) {
-  let [svgfill, setsvgfill] = useState(props.mode.color);
-  let [svgback, setsvgback] = useState(props.mode.backgroundColor);
-
+  let theme = useTheme();
   let styl;
-  if (props.mode === color.darkTheme) {
+  if (theme.mode === color.darkTheme) {
     styl = {
-      border: `1px solid ${props.mode.color}`,
+      border: `1px solid ${theme.mode.color}`,
       flexDirection: "row",
     };
   } else {
     styl = {
-      border: `1px solid ${props.mode.color}`,
+      border: `1px solid ${theme.mode.color}`,
       flexDirection: "row-reverse",
     };
   }
@@ -43,14 +42,14 @@ function Home(props) {
           <div className={styles.navlink}>
             <div style={styl} className={styles.modes}>
               <div className={styles.modename}>
-                {props.mode === color.darkTheme ? "NIGHTMODE" : "LIGHTMODE"}
+                {theme.mode === color.darkTheme ? "NIGHTMODE" : "LIGHTMODE"}
               </div>
 
-              {props.mode === color.darkTheme ? (
+              {theme.mode === color.darkTheme ? (
                 <div
                   style={{ left: "75%" }}
                   className={styles.modecircle}
-                  onClick={props.handleMode}
+                  onClick={theme.handleMode}
                 >
                   <FaStarAndCrescent />
                 </div>
@@ -58,18 +57,18 @@ function Home(props) {
                 <div
                   style={{ left: "1%" }}
                   className={styles.modecircle}
-                  onClick={props.handleMode}
+                  onClick={theme.handleMode}
                 >
                   <FaRegSun />
                 </div>
               )}
             </div>
             <div style={styl} className={styles.phonemode}>
-              {props.mode === color.darkTheme ? (
+              {theme.mode === color.darkTheme ? (
                 <div
                   style={{ left: "65%" }}
                   className={styles.phonemodecircle}
-                  onClick={props.handleMode}
+                  onClick={theme.handleMode}
                 >
                   <FaStarAndCrescent />
                 </div>
@@ -77,13 +76,13 @@ function Home(props) {
                 <div
                   style={{ left: "2%" }}
                   className={styles.phonemodecircle}
-                  onClick={props.handleMode}
+                  onClick={theme.handleMode}
                 >
                   <FaRegSun />
                 </div>
               )}
             </div>
-            <Link to={"#"}>
+            <Link to={"/about"}>
               <FaPuzzlePiece /> explore
             </Link>
           </div>
@@ -98,22 +97,22 @@ function Home(props) {
               <h4>we have worked with</h4>
               <div className={styles.comlogo}>
                 <Svg3
-                  style={{ fill: `${props.mode.color}` }}
+                  style={{ fill: `${theme.mode.color}` }}
                   onMouseOver={props.handleHover}
                   onMouseOut={props.handleHoverout}
                 />
                 <Svg2
-                  style={{ fill: `${props.mode.color}` }}
+                  style={{ fill: `${theme.mode.color}` }}
                   onMouseOver={props.handleHover}
                   onMouseOut={props.handleHoverout}
                 />
                 <Svg4
-                  style={{ fill: `${props.mode.color}` }}
+                  style={{ fill: `${theme.mode.color}` }}
                   onMouseOver={props.handleHover}
                   onMouseOut={props.handleHoverout}
                 />
                 <Svg1
-                  style={{ fill: `${props.mode.color}` }}
+                  style={{ fill: `${theme.mode.color}` }}
                   onMouseOver={props.handleHover}
                   onMouseOut={props.handleHoverout}
                 />
