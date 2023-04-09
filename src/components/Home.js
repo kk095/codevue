@@ -91,10 +91,9 @@ function Home(props) {
           <div className={styles.text}>
             <div className={styles.caption}>
               <h1>Our code, your vue</h1>
-              <button>
-                {" "}
-                <Link to={"/allpages"}>let's collaborate</Link>
-              </button>
+              <Link to={"/allpages"}>
+                <button>let's collaborate</button>
+              </Link>
             </div>
             <div className={styles.companies}>
               <h4>we have worked with</h4>

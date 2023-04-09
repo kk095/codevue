@@ -2,41 +2,46 @@ import { Navbar, Aside, Nextpage } from "../components";
 import AboutPage from "./AboutPage";
 import TeamPage from "./TeamPage";
 import { useEffect, useRef, useState, useMemo } from "react";
-import useResize from "../hooks/resize";
 
 let scrollIntoView = require("scroll-into-view");
 
 function Allpages() {
+  const [child, setChild] = useState("1");
   const ref = useRef(null);
   const aboutRef = useRef(null);
   const teamRef = useRef(null);
+  const allref = {
+    1: aboutRef,
+    2: teamRef,
+  };
   let pos = 0;
 
   useEffect(() => {
-    function check() {
-      console.log("scrolling...");
-    }
     window.addEventListener("scroll", handlescroll);
     return () => {
       window.removeEventListener("scroll", handlescroll);
     };
   }, []);
-  const handleclick = (e) => {
-    console.log("clicked");
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log("clicked!");
+    let r = e.target.getAttribute("data-val");
+    scrollIntoView(allref[r].current, function () {
+      pos = window.scrollY;
+      console.log("pos:", pos);
+      setChild(r);
+    });
   };
+
   const handlescroll = (e) => {
     let newPos = window.scrollY;
-    console.log("pos:", pos);
-    console.log("newpos:", newPos);
-    console.log("diff:", pos - newPos);
     let dir = null;
     if (pos - newPos < 0) {
       dir = "down";
     } else if (pos - newPos > 0) {
       dir = "up";
     }
-    console.log("dir:", dir);
     if (dir == "up") {
       if (pos == 0) {
         scrollIntoView(aboutRef.current, function () {
@@ -45,12 +50,18 @@ function Allpages() {
       } else if (pos == window.innerHeight) {
         scrollIntoView(aboutRef.current, function () {
           pos = window.scrollY;
+          console.log("pos:", pos);
+          setChild(1);
         });
       }
     } else if (dir == "down") {
       if (pos == 0) {
-        scrollIntoView(teamRef.current, function () {
+        let num = parseInt(child) + 1;
+        let st = num.toString();
+        scrollIntoView(allref[st].current, function () {
           pos = window.scrollY;
+          console.log("pos:", pos);
+          setChild(2);
         });
       } else if (pos == window.innerHeight) {
         scrollIntoView(teamRef.current, function () {
@@ -62,7 +73,7 @@ function Allpages() {
   return (
     <div ref={ref}>
       <Navbar />
-      <Aside />
+      <Aside child={child} myref={teamRef} handleclick={handleClick} />
       <Nextpage />
       <AboutPage childref={aboutRef} />
       <TeamPage childref={teamRef} />
