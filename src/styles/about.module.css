@@ -1,9 +1,8 @@
 @import "color.css";
 
 .aboutsection{
-    width: 100%;
+    width: 75%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 
@@ -12,8 +11,8 @@
     font-weight: 700;
 }
 .mainabout{
-    width: 70%;
-    height: 90%;
+    width: 100%;
+    height: 95%;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
@@ -21,12 +20,12 @@
 }
 
 .mainabout p{
-    width: 80%;
+    width: 500px;
 }
 
 .mainabout p:last-of-type{
     align-self: flex-end;
-    width: 45%;
+    width: 500px;
     justify-items: flex-end;
     margin-top: 10%;
     position: relative;
@@ -48,4 +47,43 @@
     font-size: 4rem;
     top:-30px;
     left: -20px;
+}
+
+@media screen and (max-width:900px) {
+    .aboutsection{
+        font-size: .9rem;
+    }
+    .mainabout{
+        gap: 2%;
+    }
+    .mainabout p{
+        width: 98%;
+    }
+    .mainabout p:last-of-type{
+        width: 80%;
+    }
+    .quotes{
+        font-size: 3rem;
+        top: -20px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .aboutsection{
+        font-size: .9rem;
+        width: 98%;
+    }
+    .mainabout{
+        gap: 2%;
+    }
+    .mainabout p{
+        width: 98%;
+    }
+    .mainabout p:last-of-type{
+        width: 80%;
+    }
+    .quotes{
+        font-size: 3rem;
+        top: -20px;
+    }
 }

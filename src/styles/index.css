@@ -28,3 +28,7 @@ a{
   color: var(--teamColor);
   border-bottom:2px solid var(--teamColor) ;
 }
+
+body::-webkit-scrollbar {
+  width: 0;
+}

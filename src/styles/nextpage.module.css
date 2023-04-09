@@ -1,0 +1,20 @@
+.icondiv{
+    position: fixed;
+    bottom: 2%;
+    left: 25%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 100;
+}
+
+@media screen  and (max-width:900px) {
+    .icondiv{
+        font-size: .9rem;
+    }
+}
+@media screen  and (max-width:600px) {
+    .icondiv{
+        left: 2%;
+    }
+}

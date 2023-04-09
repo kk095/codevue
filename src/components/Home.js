@@ -82,7 +82,7 @@ function Home(props) {
                 </div>
               )}
             </div>
-            <Link to={"/about"}>
+            <Link to={"/allpages"}>
               <FaPuzzlePiece /> explore
             </Link>
           </div>
@@ -91,7 +91,10 @@ function Home(props) {
           <div className={styles.text}>
             <div className={styles.caption}>
               <h1>Our code, your vue</h1>
-              <button>let's collaborate</button>
+              <button>
+                {" "}
+                <Link to={"/allpages"}>let's collaborate</Link>
+              </button>
             </div>
             <div className={styles.companies}>
               <h4>we have worked with</h4>

@@ -1,8 +1,12 @@
 @import "color.css";
 
 .aside{
-    width: 100%;
-    height: 100%;
+    width: 15%;
+    height: 70%;
+    position: fixed;
+    top:30%;
+    left: 5%;
+    z-index: 100;
 }
 
 .ul{
@@ -15,4 +19,17 @@
 .item1{
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+@media screen and (max-width:900px){
+    .aside{
+        left: 2%;
+        font-size: .9rem;
+        width: 20%;
+    }
+}
+@media screen and (max-width:600px){
+    .aside{
+        display: none;
+    }
 }

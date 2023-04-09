@@ -1,4 +1,8 @@
 .teampage{
     width: 100%;
     height: 100Vh;
+    padding-top: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }

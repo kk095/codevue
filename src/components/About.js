@@ -8,11 +8,9 @@ function About(props) {
   const stl = {
     height: `${props.height - 100}px`,
   };
+  let idx = 1;
   return (
     <div style={stl} className={styles.aboutsection}>
-      <div className={styles.leftside}>
-        <Aside child={1} />
-      </div>
       <div className={styles.mainabout}>
         <h1 className={styles.h1}>about</h1>
         <p>
@@ -32,10 +30,6 @@ function About(props) {
           values & one thing that has stayed with us is QCT - Quality,
           communication circle, and trust and transparency time.
         </p>
-
-        <div className={styles.icondiv}>
-          <Icon fill="none" stroke={theme.mode.color} /> our team
-        </div>
       </div>
     </div>
   );

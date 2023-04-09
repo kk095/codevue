@@ -50,6 +50,7 @@ function HomePage() {
       }}
       className={styles.homepage}
     >
+      <div></div>
       <Home handleHoverout={handleHoverout} handleHover={handleHover} />
     </div>
   );
