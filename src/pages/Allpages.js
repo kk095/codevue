@@ -1,6 +1,8 @@
 import { Navbar, Aside, Nextpage } from "../components";
 import AboutPage from "./AboutPage";
 import TeamPage from "./TeamPage";
+import TestimonialPage from "./Testimonialpage.js";
+import ManifestoPage from "./Manifestopage";
 import { useEffect, useRef, useState, useMemo } from "react";
 
 let scrollIntoView = require("scroll-into-view");
@@ -10,27 +12,35 @@ function Allpages() {
   const ref = useRef(null);
   const aboutRef = useRef(null);
   const teamRef = useRef(null);
+  const testimonialRef = useRef(null);
+  const manifestoRef = useRef(null);
   const allref = {
     1: aboutRef,
     2: teamRef,
+    3: testimonialRef,
+    4: manifestoRef,
   };
   let pos = 0;
 
-  useEffect(() => {
-    window.addEventListener("scroll", handlescroll);
-    return () => {
-      window.removeEventListener("scroll", handlescroll);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handlescroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handlescroll);
+  //   };
+  // }, []);
 
   const handleClick = (e) => {
     e.preventDefault();
+    // window.removeEventListener("scroll", handlescroll);
     console.log("clicked!");
     let r = e.target.getAttribute("data-val");
+    console.log(r);
+    console.log(allref[r].current);
     scrollIntoView(allref[r].current, function () {
       pos = window.scrollY;
       console.log("pos:", pos);
       setChild(r);
+      // window.addEventListener("scroll", handlescroll);
     });
   };
 
@@ -74,9 +84,11 @@ function Allpages() {
     <div ref={ref}>
       <Navbar />
       <Aside child={child} myref={teamRef} handleclick={handleClick} />
-      <Nextpage />
+      <Nextpage child={child} />
       <AboutPage childref={aboutRef} />
       <TeamPage childref={teamRef} />
+      <TestimonialPage childref={testimonialRef} />
+      <ManifestoPage childref={manifestoRef} />
     </div>
   );
 }

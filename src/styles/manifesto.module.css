@@ -1,0 +1,62 @@
+@import "color.css";
+
+
+.maindiv{
+    width: 75%;
+    /* background-color: yellowgreen; */
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+.maindiv h1{
+    color: var(--headingColor);
+}
+
+.tabs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    width: 70%;
+    margin-bottom: 20px;
+}
+.tabs div{
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.tabclick{
+    border-bottom: 2px solid var(--manifestoColor);
+    color: var(--manifestoColor);
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    height: 80%;
+    /* background-color:violet */
+}
+
+@media screen and (max-width:900px) {
+    .tabs{
+        font-size: 1rem;
+        width: 90%;
+    }
+}
+@media screen and (max-width:600px) {
+    .maindiv{
+        width: 98%;
+    }
+    .tabs{
+        font-size: 1rem;
+        width: 90%;
+    }
+}
+@media screen and (max-width:400px) {
+    .tabs{
+        font-size: 4vw;
+        width: 98%;
+    }
+}

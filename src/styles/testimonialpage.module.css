@@ -1,0 +1,14 @@
+@import "color.css";
+
+
+
+.testimonial{
+    background-color: var(--darkBackgroundColor);
+    color: var(--darkPrimaryColor);
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}

@@ -48,20 +48,34 @@ function Aside(props) {
         </li>
         <li className={styles.item4}>
           {props.child == 3 ? (
-            <Link style={styl} to={"/about"}>
+            <Link
+              style={styl}
+              to={"/about"}
+              data-val="3"
+              onClick={props.handleclick}
+            >
               testimonials
             </Link>
           ) : (
-            <Link to={"/about"}>testimonials</Link>
+            <Link to={"/about"} data-val="3" onClick={props.handleclick}>
+              testimonials
+            </Link>
           )}
         </li>
         <li className={styles.item5}>
           {props.child == 4 ? (
-            <Link style={styl} to={"/team"}>
+            <Link
+              style={styl}
+              to={"/team"}
+              data-val="4"
+              onClick={props.handleclick}
+            >
               manifesto
             </Link>
           ) : (
-            <Link to={"/team"}>manifesto</Link>
+            <Link to={"/team"} data-val="4" onClick={props.handleclick}>
+              manifesto
+            </Link>
           )}
         </li>
         <li className={styles.item6}>

@@ -1,0 +1,74 @@
+@import "color.css";
+
+.trust{
+    height: 80%;
+    /* background-color: turquoise; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trust p{
+    width: 70%;
+}
+.comm p{
+    width: 70%;
+}
+.quality p{
+    width: 70%;
+}
+
+.lastp{
+    align-self: flex-end;
+    position: relative;
+}
+.quotes{
+    position: absolute;
+    color: var(--headingColor);
+    opacity: .3;
+    font-size: 3rem;
+    top:-20px;
+    left: -25px;
+}
+
+@media screen and (max-width:900px) {
+    .quality p{
+        width: 80%;
+    }
+    .comm p{
+        width: 80%;
+    }
+    .trust p{
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    .quality{
+        font-size: 4vw;
+    }
+    .comm{
+        font-size: 4vw;
+    }
+    .trust{
+        font-size: 4vw;
+    }
+    .trust p{
+        width: 99%;
+    }
+    .comm p{
+        width: 99%;
+    }
+    .quality p{
+        width: 99%;
+    }
+    .trust .lastp{
+        width: 90%;
+    }
+    .quotes{
+        font-size: 2rem;
+        top: -15px;
+        left: -20px;
+    }
+}
