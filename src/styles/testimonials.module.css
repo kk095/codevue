@@ -13,7 +13,7 @@
 
 .content{
     align-self: flex-start;
-    width: 60%;
+    width: 75%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -22,37 +22,48 @@
 
 .main h1{
     color: var(--headingColor);
+    font-size: 2.5rem;
 }
 .userimg2{
     display: none;
-    width: 25%;
+    width: 100px;
     aspect-ratio: 1/1;
+    background-color: var(--headingColor);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    align-self: center;
 }
 .userimg{
     width: 25%;
     aspect-ratio: 1/1;
     margin-right: 2%;
-}
-.userimg img{
-    width: 100%;
-    height: 100%;
+    background-color: var(--headingColor);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.userimg2 img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+
+.userimg div{
+    font-size: 5rem;
 }
+
 
 .content p{
     position: relative;
+    font-size: .9rem;
+}
+.content p:nth-last-child(2) {
+    margin-top: 2%;
 }
 .quotes{
     position: absolute;
     color: var(--headingColor);
     opacity: .3;
-    font-size: 4rem;
-    top:-30px;
+    font-size: 3rem;
+    top:-20px;
     left: -20px;
 }
 
@@ -61,11 +72,14 @@
         width: 90%;
         font-size: .9rem;
     }
+    .content p{
+        font-size: .8rem;
+    }
     .userimg{
         display: none;
     }
     .userimg2{
-        display: block;
+        display: flex;
     }
     .quotes{
         font-size: 3rem;
@@ -77,6 +91,9 @@
 
 @media screen and (max-width:600px) {
     .main{
+        width: 98%;
+    }
+    .content{
         width: 98%;
     }
     .content p:nth-of-type(2){

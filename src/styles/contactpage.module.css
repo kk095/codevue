@@ -1,11 +1,9 @@
 @import "color.css";
 
-
-
-.testimonial{
+.contactpage{
     width: 100%;
     height: 100vh;
-    padding-top: 80px;
+    padding-top:80px;
     display: flex;
     justify-content: flex-end;
     overflow: hidden;

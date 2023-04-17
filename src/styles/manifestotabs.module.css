@@ -42,6 +42,17 @@
         width: 80%;
     }
 }
+@media screen and (max-width:600px) {
+    .quality p{
+        width: 99%;
+    }
+    .comm p{
+        width: 99%;
+    }
+    .trust p{
+        width: 99%;
+    }
+}
 
 
 @media screen and (max-width:400px) {

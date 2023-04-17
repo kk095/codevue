@@ -4,7 +4,7 @@ let color = {
     color: "white",
   },
   lightTheme: {
-    backgroundColor: "#fbfcfa",
+    backgroundColor: "#fdfff1",
     color: "black",
   },
 };

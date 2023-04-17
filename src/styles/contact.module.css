@@ -1,0 +1,91 @@
+@import "color.css";
+
+.contact{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+.contact>p{
+    width: 70%;
+    font-size: .9rem;
+}
+
+.heading{
+    font-size: 2.5rem;
+    color: var(--headingColor);
+}
+
+.contactopt{
+    display: flex;
+    gap: 20px;
+}
+
+.opt1{
+    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--darkPrimaryColor);
+}
+.opt2{
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--darkPrimaryColor);
+}
+.opt1 p{
+    font-size: .85rem;
+    margin-top: 5px;
+}
+.opt2 p{
+    font-size: .85rem;
+    margin-top: 5px;
+}
+.opt1:hover{
+    box-shadow: 0px 0px 10px 3px var(--onHoverShadow);
+}
+.opt2:hover{
+    box-shadow: 0px 0px 10px 3px var(--onHoverShadow);
+}
+
+@media screen and (max-width:700px) {
+    .contact>p{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:600px)
+ {
+    .contact{
+        width: 98%;
+    }
+    .contact>p{
+        width: 100%;
+    }
+}
+@media screen and (max-width:500px)
+ {
+    .contact>p{
+        font-size: 3vw;
+    }
+    .contactopt{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .opt1{
+        width: 90%;
+        padding: 10px;
+    }
+    .opt2{
+        width: 90%;
+        padding: 10px;
+    }
+    .opt1 p{
+        font-size: 3vw;
+    }
+    .opt2 p{
+        font-size: 3vw;
+    }
+}

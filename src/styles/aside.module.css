@@ -7,6 +7,16 @@
     top:30%;
     left: 5%;
     z-index: 100;
+    animation: anim 2s ease-in-out;
+}
+
+@keyframes anim {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity : 1;
+    }
 }
 
 .ul{

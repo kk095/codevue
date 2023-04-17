@@ -3,6 +3,7 @@ import AboutPage from "./AboutPage";
 import TeamPage from "./TeamPage";
 import TestimonialPage from "./Testimonialpage.js";
 import ManifestoPage from "./Manifestopage";
+import ContactPage from "./ContactPage";
 import { useEffect, useRef, useState, useMemo } from "react";
 
 let scrollIntoView = require("scroll-into-view");
@@ -14,11 +15,13 @@ function Allpages() {
   const teamRef = useRef(null);
   const testimonialRef = useRef(null);
   const manifestoRef = useRef(null);
+  const contactRef = useRef(null);
   const allref = {
     1: aboutRef,
     2: teamRef,
     3: testimonialRef,
     4: manifestoRef,
+    5: contactRef,
   };
   let pos = 0;
 
@@ -85,10 +88,11 @@ function Allpages() {
       <Navbar />
       <Aside child={child} myref={teamRef} handleclick={handleClick} />
       <Nextpage child={child} />
-      <AboutPage childref={aboutRef} />
+      {/* <AboutPage childref={aboutRef} />
       <TeamPage childref={teamRef} />
       <TestimonialPage childref={testimonialRef} />
-      <ManifestoPage childref={manifestoRef} />
+      <ManifestoPage childref={manifestoRef} /> */}
+      <ContactPage childref={contactRef} />
     </div>
   );
 }

@@ -38,11 +38,11 @@ function Aside(props) {
               data-val="2"
               onClick={props.handleclick}
             >
-              out team
+              our team
             </Link>
           ) : (
             <Link to={"/team"} data-val="2" onClick={props.handleclick}>
-              out team
+              our team
             </Link>
           )}
         </li>
@@ -79,7 +79,7 @@ function Aside(props) {
           )}
         </li>
         <li className={styles.item6}>
-          {props.child == 5 ? (
+          {props.child == 6 ? (
             <Link style={styl} to={"/about"}>
               services
             </Link>
@@ -88,10 +88,14 @@ function Aside(props) {
           )}
         </li>
         <li className={styles.item7}>
-          {props.child == 6 ? (
-            <Link style={styl}>contact</Link>
+          {props.child == 5 ? (
+            <Link style={styl} data-val="5" onClick={props.handleclick}>
+              contact
+            </Link>
           ) : (
-            <Link>contact</Link>
+            <Link data-val="5" onClick={props.handleclick}>
+              contact
+            </Link>
           )}
         </li>
       </ul>

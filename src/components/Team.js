@@ -35,12 +35,22 @@ function Team(props) {
   return (
     <div className={styles.main}>
       <h1 className={styles.h1}>our teams</h1>
+      <div>
+        <i>𝒞𝑜𝒹𝑒𝒱𝓊𝑒 𝒾𝓈 𝒻𝓇𝒾𝓋𝑜𝓁𝒾𝓉𝓎 𝓌𝒾𝓉𝒽𝑜𝓊𝓉 𝑜𝓊𝓇 𝓉𝑒𝒶𝓂 𝑜𝒻 𝒷𝓇𝒶𝒾𝓃𝒾𝒶𝒸𝓈.</i>
+      </div>
       <div className={styles.teamdes}>
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters, as opposed to using 'Content here, content here', making it
-        look like readable English. Many desktop publishing packages.
+        They aren't just creative experts, technology advisors, growth
+        facilitators, or developers; they are jovial and upholders backing the
+        future of Codevue family. We have a team of talented developers who are
+        the creators, revenue strategists who handle analytics, designers who
+        work in the creative department, and salespeople who are the
+        wheeler-dealers. Together, we bring a unique mix of creativity and
+        technical expertise to every project, streamlining processes and
+        delivering exceptional results.
+        <p>
+          We are multi-cultured, multi-backgrounds, and multi-faceted. We are
+          free spirits, curious minds, and artistic souls.
+        </p>
       </div>
       <div>
         <div className={styles.teamtype}>

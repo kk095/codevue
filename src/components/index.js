@@ -7,6 +7,9 @@ import Nextpage from "./Nextpage";
 import Testimonials from "./testimonials";
 import Manifesto from "./Manifesto";
 import { Trust, Quality, Communication } from "./ManifestoTabs";
+import Contact from "./Contact";
+import ContactForm from "./ContactForm";
+import Question from "./questions";
 export {
   Home,
   About,
@@ -19,4 +22,7 @@ export {
   Trust,
   Quality,
   Communication,
+  Contact,
+  ContactForm,
+  Question,
 };

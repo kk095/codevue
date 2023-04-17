@@ -9,6 +9,11 @@
 .h1{
     color: var(--headingColor);
     font-weight: 700;
+    font-size: 2.5rem;
+}
+.tagline{
+    font-size: .9rem;
+    font-style: oblique;
 }
 .mainabout{
     width: 100%;
@@ -16,19 +21,20 @@
     align-self: flex-start;
     display: flex;
     flex-direction: column;
-    gap: 5%;
+    gap: 3%;
 }
 
 .mainabout p{
-    width: 500px;
+    width: 85%;
+    font-size: .9rem;
 }
 
 .mainabout p:last-of-type{
     align-self: flex-end;
-    width: 500px;
+    width: 70%;
     justify-items: flex-end;
-    margin-top: 10%;
     position: relative;
+    margin-top: 10px;
 }
 .leftside{
     width: 15%;
@@ -44,12 +50,15 @@
     position: absolute;
     color: var(--headingColor);
     opacity: .3;
-    font-size: 4rem;
-    top:-30px;
+    font-size: 3rem;
+    top:-20px;
     left: -20px;
 }
 
 @media screen and (max-width:900px) {
+    .h1{
+        font-size: 2.5rem;
+    }
     .aboutsection{
         font-size: .9rem;
     }
@@ -58,6 +67,7 @@
     }
     .mainabout p{
         width: 98%;
+        font-size: .8rem;
     }
     .mainabout p:last-of-type{
         width: 80%;
@@ -76,8 +86,16 @@
     .mainabout{
         gap: 2%;
     }
+    .h1{
+        font-size: 8vw;
+    }
+    .tagline{
+        font-size: 3vw;
+        font-style: italic;
+    }
     .mainabout p{
         width: 98%;
+        font-size: 2.5vw;
     }
     .mainabout p:last-of-type{
         width: 80%;

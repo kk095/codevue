@@ -1,0 +1,99 @@
+@import "color.css";
+
+.contactform{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+
+.formdiv{
+    display: flex;
+    gap: 2%;
+    justify-content: space-between;
+}
+.formdiv p{
+    font-size: 3.5rem;
+    font-weight: 800;
+    width: 300px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form{
+    width: 50%;
+}
+
+.form h3{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+.myform{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    margin-top: 30px;
+}
+.myform input{
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid var(--headingColor);
+    width:90%;
+    height: 30px;
+    font-size: 1rem;
+    color:var(--darkPrimaryColor);
+}
+
+
+
+.btn{
+    outline: none;
+    background: transparent;
+    border: none;
+    height: auto;
+    width:fit-content;
+    padding: 10px 15px;
+    color: var(--darkPrimaryColor);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    align-self: flex-end;
+    margin-right: 10%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn:disabled{
+    cursor: no-drop;
+    color: var(--submitBtn);
+}
+
+.btn svg{
+    font-size: 1.5rem;
+}
+
+
+@media screen and (max-width:750px) {
+    .formdiv p{
+    font-size: 7.4vw;
+    font-weight: 800;
+    width: 250px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+}
+@media screen and (max-width:600px) {
+    .contactform{
+        width: 98%;
+    }
+    .formdiv p{
+    font-size: 9vw;
+    display: none;
+    }
+    .form{
+        width: 98%;
+    }
+}

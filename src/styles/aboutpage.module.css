@@ -5,7 +5,7 @@
     color: var(--darkPrimaryColor);
     width: 100%;
     height: 100vh;
-    padding-top: 100px;
+    padding-top: 80px;
     display: flex;
     justify-content: flex-end;
     overflow: hidden;
@@ -13,6 +13,6 @@
 
 @media screen and (max-width:600px){
     .aboutpage{
-        padding-top: 150px;
+        padding-top: 80px;
     }
 }
