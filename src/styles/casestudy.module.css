@@ -2,6 +2,7 @@
 
 .studydiv{
     width: 75%;
+    font-size: .9rem;
 }
 
 .h1{
@@ -23,7 +24,6 @@
     max-width: 675px;
     height: 30vh;
     margin: 20px 0;
-    border: 1px solid white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,13 +32,18 @@
     font-size: 1.5rem;
     cursor: pointer;
 }
+.nextprevstop{
+    cursor: no-drop;
+    pointer-events: none;
+    color: grey
+}
 .visiblepart{
     width: 95%;
     height: 100%;
-    border: 1px solid green;
     cursor: pointer;
     overflow-y: auto;
     display: flex;
+    scroll-behavior: smooth;
 }
 .visiblepart>div{
     width: 100%;
@@ -52,3 +57,4 @@
     width: 0;
     height: 0;
 }
+

@@ -96,7 +96,7 @@ function Allpages() {
       <TestimonialPage childref={testimonialRef} />
       <ManifestoPage childref={manifestoRef} />
       <ContactPage childref={contactRef} />
-      {/* <CaseStudyPage childref={caseStudyRef} /> */}
+      <CaseStudyPage childref={caseStudyRef} />
     </div>
   );
 }
