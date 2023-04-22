@@ -5,6 +5,7 @@ import Allpages from "./Allpages";
 import TestimonialPage from "./Testimonialpage";
 import ManifestoPage from "./Manifestopage";
 import ContactPage from "./ContactPage";
+import CaseStudyPage from "./caseStudyPage";
 export {
   HomePage,
   AboutPage,
@@ -13,4 +14,5 @@ export {
   TestimonialPage,
   ManifestoPage,
   ContactPage,
+  CaseStudyPage,
 };

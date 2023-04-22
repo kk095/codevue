@@ -9,8 +9,9 @@ function Nextpage(props) {
     2: "our team",
     3: "testimonials",
     4: "manifesto",
-    5: "services",
-    6: "contact",
+    5: "contact",
+    6: "case study",
+    7: "services",
   };
   let num = parseInt(props.child) + 1;
   return (

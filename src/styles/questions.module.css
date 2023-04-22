@@ -9,7 +9,8 @@
 }
 
 .questions p{
-    width: 500px;
+    width: 595px;
+    font-size: .9rem;
 }
 
 .quescont{
@@ -62,6 +63,8 @@
     width: 95%;
     align-self: flex-end;
 }
+
+
 .ul li{
     width: fit-content;
     cursor: pointer;
@@ -93,4 +96,20 @@
     color: var(--darkPrimaryColor);
     font-size: 1.2rem;
     display: none;
+}
+
+@media screen and (max-width:800px) {
+    .questions p{
+        width: 98%;
+    }
+}
+@media screen and (max-width:600px) {
+    .questions {
+        width: 99%;
+    }
+}
+@media screen and (max-width:400px) {
+    .quescont {
+        font-size: .8rem;
+    }
 }

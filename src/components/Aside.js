@@ -79,15 +79,6 @@ function Aside(props) {
           )}
         </li>
         <li className={styles.item6}>
-          {props.child == 6 ? (
-            <Link style={styl} to={"/about"}>
-              services
-            </Link>
-          ) : (
-            <Link to={"/about"}>services</Link>
-          )}
-        </li>
-        <li className={styles.item7}>
           {props.child == 5 ? (
             <Link style={styl} data-val="5" onClick={props.handleclick}>
               contact
@@ -96,6 +87,26 @@ function Aside(props) {
             <Link data-val="5" onClick={props.handleclick}>
               contact
             </Link>
+          )}
+        </li>
+        <li className={styles.item7}>
+          {props.child == 7 ? (
+            <Link style={styl} data-val="6" onClick={props.handleclick}>
+              case study
+            </Link>
+          ) : (
+            <Link data-val="6" onClick={props.handleclick}>
+              case study
+            </Link>
+          )}
+        </li>
+        <li className={styles.item8}>
+          {props.child == 8 ? (
+            <Link style={styl} to={"/about"}>
+              services
+            </Link>
+          ) : (
+            <Link to={"/about"}>services</Link>
           )}
         </li>
       </ul>

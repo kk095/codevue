@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "../styles/questions.module.css";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import SelectTeam from "./SelectTeam";
 
 const questions = [
   "Q. I don't think we've been formally introduced. Hi, I'm Shashank, what's your name?",
@@ -13,7 +14,6 @@ function Question() {
   let [phone, setphone] = useState("");
   let [email, setemail] = useState("");
   let [skype, setskype] = useState("");
-  let [team, setteam] = useState("");
   let [btn, setbtn] = useState(true);
   const [count, setcount] = useState(0);
   const headRef = useRef(null);
@@ -23,13 +23,13 @@ function Question() {
   const skRef = useRef(null);
   useEffect(() => {
     if (count == 0) {
-      if (name != "") {
+      if (name.length > 2) {
         setbtn(false);
       } else {
         setbtn(true);
       }
     } else if (count == 1) {
-      if (phone != "" || email != "" || skype != "") {
+      if (phone.length > 9 || email != "" || skype != "") {
         setbtn(false);
       } else {
         setbtn(true);
@@ -126,7 +126,7 @@ function Question() {
         )}
         {count == 2 && (
           <>
-            <h3 className={styles.ques}>{questions[count]}</h3>
+            <SelectTeam btn={btn} setbtn={setbtn} />
           </>
         )}
         {count == 0 && (

@@ -10,6 +10,8 @@ import { Trust, Quality, Communication } from "./ManifestoTabs";
 import Contact from "./Contact";
 import ContactForm from "./ContactForm";
 import Question from "./questions";
+import SelectTeam from "./SelectTeam";
+import CaseStudy from "./Casestudy";
 export {
   Home,
   About,
@@ -25,4 +27,6 @@ export {
   Contact,
   ContactForm,
   Question,
+  SelectTeam,
+  CaseStudy,
 };
