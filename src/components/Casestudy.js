@@ -2,12 +2,18 @@ import styles from "../styles/casestudy.module.css";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import cases from "../casestudy.js";
 import { useEffect, useRef, useState } from "react";
+import { useTheme } from "../hooks/theme";
+import img from "../images/card.jpg";
 
 function CaseStudy() {
+  let theme = useTheme();
   const [currentSilde, setSlide] = useState(0);
+  const [mycase, setcase] = useState(cases[0]);
   let visibleRef = useRef(null);
   let prevRef = useRef(null);
   let nextRef = useRef(null);
+  let cardRef = useRef(null);
+  let carouselRef = useRef(null);
   useEffect(() => {
     let dv = visibleRef.current.childNodes;
     if (currentSilde == 0) {
@@ -50,9 +56,56 @@ function CaseStudy() {
     console.log(e.target.closest("div"));
     let num = e.target.closest("div").getAttribute("data-val");
     console.log(num);
+    let obj = cases[num];
+    setcase(obj);
+    cardRef.current.style.display = "flex";
+    carouselRef.current.style.visibility = "hidden";
+    carouselRef.current.style.pointerEvents = "none";
+  };
+  const handleCross = (e) => {
+    cardRef.current.style.display = "none";
+    carouselRef.current.style.visibility = "visible";
+    carouselRef.current.style.pointerEvents = "unset";
   };
   return (
     <div className={styles.studydiv}>
+      <div style={theme.mode} ref={cardRef} className={styles.card}>
+        <div className={styles.imgdiv}>
+          <img src={img} alt="img" />
+        </div>
+        <div className={styles.textdiv}>
+          {Object.keys(mycase).map((key, idx) => {
+            if (key == "h1") {
+              return <h2 key={`${key}-${idx}`}>{mycase[key]}</h2>;
+            }
+            if (key == "p") {
+              return (
+                <div key={`${key}-${idx}`}>
+                  <h3>Introduction</h3>
+                  <p>{mycase[key]}</p>
+                </div>
+              );
+            }
+
+            let x = Object.keys(mycase[key]).map((k, i) => {
+              if (i == 0) {
+                return (
+                  <div key={`${key}-${k}-${i}`}>
+                    <h3>{key}</h3>
+                    <p>{mycase[key][k]}</p>
+                  </div>
+                );
+              } else {
+                return <p>{mycase[key][k]}</p>;
+              }
+            });
+            return x;
+          })}
+        </div>
+        <div className={styles.cross} onClick={handleCross}>
+          X
+        </div>
+      </div>
       <h1 className={styles.h1}>Case Study</h1>
       <div className={styles.tagline}>
         <i>𝒲𝑒 𝓀𝓃𝑜𝓌 𝒮𝑜𝒻𝓉𝓌𝒶𝓇𝑒 𝒶𝓃𝒹 𝒶𝓅𝓅𝓈; 𝓀𝓃𝑜𝓌 𝓌𝒽𝓎, 𝒷𝑒𝒸𝒶𝓊𝓈𝑒 𝓌𝑒 𝓌𝓇𝒾𝓉𝑒 𝓉𝒽𝑒𝓂.</i>
@@ -68,7 +121,7 @@ function CaseStudy() {
         than just a tool - it will be a true digital companion that users can't
         live without..
       </p>
-      <div className={styles.carousel}>
+      <div ref={carouselRef} className={styles.carousel}>
         <div className={styles.nextprev} ref={prevRef}>
           <FaAngleLeft onClick={handleLeft} />
         </div>
